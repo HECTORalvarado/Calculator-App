@@ -126,8 +126,6 @@ main{
 
 /** Baseline, reset styles **/
 input[type="range"] {
-	-webkit-appearance: none;
-	appearance: none;
 	background: transparent;
 	cursor: pointer;
 	width: 4.3rem;
@@ -141,7 +139,9 @@ input[type="range"]:focus {
 /** Chrome styles **/
 /* slider track */
 input[type="range"]::-webkit-slider-runnable-track {
-	height: 1rem;
+	height: 1.5rem;
+	padding: 3.89px 4px;
+	border-radius: 50px;
 }
 
 /* slider thumb */
@@ -160,6 +160,7 @@ input[type="range"]:focus::-webkit-slider-thumb {
 input[type="range"]::-moz-range-track {
 	border-radius: 50px;
 	outline: none;
+	padding: 0px 40px;
 	height: 1.5rem;
 }
 
@@ -322,6 +323,7 @@ input[type="range"]:focus::-moz-range-thumb{
 	/* Atribution */
 	
 .attribution {
+	margin-bottom: 20px;
 	font-size: 14px;
 	text-align: center; 
 }
