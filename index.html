@@ -8,11 +8,6 @@
   
   <title>Frontend Mentor | Calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body class="theme1" id="body">
   <main>
@@ -27,30 +22,30 @@
       </div>
     </div>
     <div class="screen">
-      <p>0</p>
+      <p id="screenPad">0</p>
     </div>
     <div class="keypad">
       <div class="numbers">
-        <div id="btn1">7</div>
-        <div id="btn2">8</div>
-        <div id="btn3">9</div>
-        <div class="especial" id="btn4">Del</div>
+        <div id="btn7">7</div>
+        <div id="btn8">8</div>
+        <div id="btn9">9</div>
+        <div class="especial" id="btnDel">Del</div>
+        <div id="btn4">4</div>
         <div id="btn5">5</div>
-        <div id="btn6">5</div>
-        <div id="btn7">6</div>
-        <div id="btn8">+</div>
-        <div id="btn9">1</div>
-        <div id="btn10">2</div>
-        <div id="btn11">3</div>
-        <div id="btn12">-</div>
-        <div id="btn13">.</div>
-        <div id="btn14">o</div>
-        <div id="btn15">/</div>
-        <div id="btn16">x</div>
+        <div id="btn6">6</div>
+        <div id="btnSum">+</div>
+        <div id="btn1">1</div>
+        <div id="btn2">2</div>
+        <div id="btn3">3</div>
+        <div id="btnSust">-</div>
+        <div id="btnDot">.</div>
+        <div id="btn0">o</div>
+        <div id="btnDiv">/</div>
+        <div id="btnMul">x</div>
       </div>
       <div class="button">
-        <div class="especial">Reset</div>
-        <div class="result">
+        <div class="especial" id="btnRes">Reset</div>
+        <div class="result" id="btnResult">
           =
         </div>
       </div>
@@ -65,5 +60,7 @@
   <link href="https://fonts.googleapis.com/css2?family=League+Spartan&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="css/style.css">
   <script src="js/bg.js"></script>
+  <script src="js/calc.js"></script>
+  <script src="js/screen.js"></script>
 </body>
 </html>
