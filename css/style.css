@@ -1,0 +1,345 @@
+:root {
+	/** Theme 1 **/
+	/* Backgrounds */
+	--MainBg: hsl(222, 26%, 31%);
+	--KeypadBg: hsl(223, 31%, 20%);
+	--ScreenBg: hsl(224, 36%, 15%);
+	/* Keys */
+	--keyBG: hsl(225, 21%, 49%);
+	--keyShadow: hsl(224, 28%, 35%);
+	--red: hsl(6, 63%, 50%);
+	--darkRed: hsl(6, 70%, 34%);
+	--orangeKeyBg: hsl(30, 25%, 89%);
+	--orangeKeyShadow: hsl(28, 16%, 65%);
+	/* Texts */
+	--DarkGrayishBlue: hsl(221, 14%, 31%);
+	--White: #ffffff;
+	/** Theme 2 **/
+	/* backgrounds */
+	--theme2MainBG: hsl(0, 0%, 90%);
+	--theme2KeyBg: hsl(0, 5%, 81%);
+	--theme2ScreenBg: hsl(0, 0%, 93%);
+	/* Keys */
+	--theme2Cyan:hsl(185, 42%, 37%);
+	--theme2CyanShadow: hsl(185, 58%, 25%);
+	--theme2Orange: hsl(25, 98%, 40%);
+	--theme2OrangeShadow: hsl(25, 99%, 27%);
+	--theme2Yellow:hsl(45, 7%, 89%);
+	--theme2YellowShadow: hsl(35, 11%, 61%);
+	/* Texts */
+	--yellow: hsl(60, 10%, 19%);
+	/** Theme 3 **/
+	/* Backgrounds */
+	--theme3Mainbg: hsl(268, 75%, 9%);
+	--theme3KeyScreenBg: hsl(268, 71%, 12%);
+	/* Keys */
+	--theme3KeyBg: hsl(281, 89%, 26%);
+	--theme3KeyShadow: hsl(285, 91%, 52%);
+	--theme3Cyan: hsl(176, 100%, 44%);
+	--theme3CyanShadow: hsl(177, 92%, 70%);
+	--theme3Violet: hsl(268, 47%, 21%);
+	--theme3MagentaShadow: hsl(290, 70%, 36%);
+	/* Texts */
+	--lightYellow: hsl(52, 100%, 62%);
+	--darkBlue: hsl(198, 20%, 13%);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'League Spartan', sans-serif;
+	font-size: 32px;
+	font-weight: 700;
+}
+
+main{
+	text-align: center;
+	margin: 10vh auto;
+	width: 28rem;
+}
+
+.header {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	text-align: left;
+}
+
+.header div {
+	display: grid;
+	grid-template-areas:  'none input'
+						  'label input';
+	font-size: 16px;
+}
+
+.input {
+	grid-area: input;
+}
+
+.themeSpan {
+	text-align: right;
+	grid-area: label;
+	margin: 22px 20px;
+}
+
+.header div label span:first-child{
+	margin-left: 4px;
+}
+
+.header div label span:nth-child(2) {
+	margin: 0px 20px;
+}
+
+.keypad {
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.numbers {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.screen {
+	border-radius: 10px;
+	padding: 0px 10px;
+	height: 50px;
+	line-height: 58px;
+	text-align: right;
+	margin: 20px 0px;
+}
+
+.keypad div {
+	border-radius: 10px;
+	margin: 10px;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.button {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+/** Baseline, reset styles **/
+input[type="range"] {
+	-webkit-appearance: none;
+	appearance: none;
+	background: transparent;
+	cursor: pointer;
+	width: 4.3rem;
+}
+
+/* Removes default focus */
+input[type="range"]:focus {
+	outline: none;
+}
+
+/** Chrome styles **/
+/* slider track */
+input[type="range"]::-webkit-slider-runnable-track {
+	height: 1rem;
+}
+
+/* slider thumb */
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none; /* Override default look */
+	appearance: none;
+	margin-top: 0px; /* Centers thumb on the track */
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {
+	outline: none;
+}
+
+/** Firefox styles **/
+/* slider track */
+input[type="range"]::-moz-range-track {
+	border-radius: 50px;
+	outline: none;
+	height: 1.5rem;
+}
+
+/* slider thumb */
+input[type="range"]::-moz-range-thumb {
+	border: none; /*Removes extra border that FF applies*/
+}
+
+input[type="range"]:focus::-moz-range-thumb{
+	outline: none;
+}
+
+.theme1 {
+	background: var(--MainBg);
+	color: var(--White);
+	transition: all 0.2s linear;
+}
+
+.theme1 input[type="range"]::-webkit-slider-runnable-track {
+	background-color: var(--ScreenBg);
+}
+
+.theme1 input[type="range"]::-webkit-slider-thumb {
+	background-color: var(--red);
+}
+
+.theme1 input[type="range"]::-moz-range-track {
+	background-color: var(--ScreenBg);
+}
+
+.theme1 input[type="range"]::-moz-range-thumb {
+	background-color: var(--red);
+}
+
+.theme1 .screen {
+	background: var(--ScreenBg);
+}
+
+.theme1 .keypad {
+	background: var(--KeypadBg);
+}
+
+.theme1 .numbers div {
+	background: var(--orangeKeyBg);
+	color: var(--yellow);
+	box-shadow: 0px 3px 0px var(--orangeKeyShadow);
+}
+
+.theme1 .keypad .especial {
+	background: var(--keyBG);
+	color: var(--White);
+	box-shadow: 0px 3px 0px var(--keyShadow);
+}
+
+.theme1 .keypad .result {
+	background: var(--red);
+	box-shadow: 0px 3px 0px var(--darkRed);
+}
+
+.keypad .result:active, .especial:active{
+	filter: brightness(150%);
+}
+	
+.theme2 {
+	background: var(--theme2MainBG);
+	color: var(--yellow);
+	transition: all 0.2s linear;
+}
+
+.theme2 input[type="range"]::-webkit-slider-runnable-track {
+	background-color: var(--theme2KeyBg);
+}
+
+.theme2 input[type="range"]::-webkit-slider-thumb {
+	background-color: var(--theme2Orange);
+}
+
+.theme2 input[type="range"]::-moz-range-track {
+	background-color: var(--theme2KeyBg);
+}
+
+.theme2 input[type="range"]::-moz-range-thumb {
+	background-color: var(--theme2Orange);
+}
+
+.theme2 .screen {
+	background: var(--theme2ScreenBg);
+}
+
+.theme2 .keypad {
+	background: var(--theme2KeyBg);
+}
+
+.theme2 .numbers div {
+	background: var(--theme2Yellow);
+	color: var(--yellow);
+	box-shadow: 0px 3px 0px var(--theme2YellowShadow);
+}
+
+.theme2 .keypad .especial {
+	background: var(--theme2Cyan);
+	color: var(--White);
+	box-shadow: 0px 3px 0px var(--theme2CyanShadow);
+}
+
+.theme2 .keypad .result {
+	background: var(--theme2Orange);
+	color: var(--White);
+	box-shadow: 0px 3px 0px var(--theme2OrangeShadow);
+}
+
+.theme3 {
+	background: var(--theme3Mainbg);
+	color: var(--lightYellow);
+	transition: all 0.2s linear;
+}
+
+.theme3 input[type="range"]::-webkit-slider-runnable-track {
+	background-color: var(--theme3KeyScreenBg);
+}
+
+.theme3 input[type="range"]::-webkit-slider-thumb {
+	background-color: var(--theme3Cyan);
+}
+
+.theme3 input[type="range"]::-moz-range-track {
+	background-color: var(--theme3KeyScreenBg);
+}
+
+.theme3 input[type="range"]::-moz-range-thumb {
+	background-color: var(--theme3Cyan);
+}
+
+.theme3 .screen {
+	background: var(--theme3KeyScreenBg);
+}
+
+.theme3 .keypad {
+	background: var(--theme3KeyScreenBg);
+}
+
+.theme3 .numbers div {
+	background: var(--theme3Violet);
+	color: var(--lightYellow);
+	box-shadow: 0px 3px 0px var(--theme3MagentaShadow);
+}
+
+.theme3 .keypad .especial {
+	background: var(--theme3KeyBg);
+	color: var(--White);
+	box-shadow: 0px 3px 0px var(--theme3KeyShadow);
+}
+
+.theme3 .keypad .result {
+	background: var(--theme3Cyan);
+	color: var(--yellow);
+	box-shadow: 0px 3px 0px var(--theme3CyanShadow);
+}
+	
+	/* Atribution */
+	
+.attribution {
+	font-size: 14px;
+	text-align: center; 
+}
+.attribution a {
+	text-decoration: none;
+	color: hsl(187, 100%, 48%);
+}
+
+.theme2 .attribution a {
+	color: var(--theme2Orange);
+}
+
+/** Responsive **/
+
+@media (max-width: 450px){
+	main {
+		width: 100%;
+		margin: 5vh auto;
+		padding: 0px 20px;
+	}
+}
