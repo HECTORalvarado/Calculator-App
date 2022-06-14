@@ -14,8 +14,6 @@ This is a solution to the [Calculator app challenge on Frontend Mentor](https://
   - [Useful resources](#useful-resources)
 - [Author](#author)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -25,7 +23,6 @@ Users should be able to:
 - See the size of the elements adjust based on their device's screen size
 - Perform mathmatical operations like addition, subtraction, multiplication, and division
 - Adjust the color theme based on their preference
-- **Bonus**: Have their initial theme preference checked using `prefers-color-scheme` and have any additional changes saved in the browser
 
 ### Screenshot
 
@@ -34,7 +31,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [github repository](https://github.com/HECTORalvarado/Calculator-App)
-- Live Site URL: [here](https://your-live-site-url.com)
+- Live Site URL: [here](https://hectoralvarado.github.io/Calculator-App/)
 
 ## My process
 
@@ -47,28 +44,21 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+In this project, I learned how to avoid the user selection of a text using css, and how to style a range input.
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.nonSelectableText {
+  user-select:none;
 }
 ```
+And a new way to delete the last character of a string
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+let newString = screenPad.textContent.slice(0, -1, screenPad.length);
 ```
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [range-input css generator](https://range-input-css.netlify.app/) - This helped me for style to a range input 
+
 
 ## Author
 
